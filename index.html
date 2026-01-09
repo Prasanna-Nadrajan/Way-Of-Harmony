@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Way of Harmony</title>
+
+  <!-- Fonts & Iconography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts: clean Japanese UI + tasteful serif for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet" as="style" onload="this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Sawarabi+Mincho&display=swap" rel="stylesheet"></noscript> 
+
+  <!-- Preload & critical styles -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="canonical" href="https://example.com/">
+
+  <meta name="description" content="A deep, practical guide to Japanese lifestyle principles—Ikigai, Kaizen, Wabi-sabi, and mindful living.">
+  <meta property="og:title" content="Ikigai & Kaizen — Japanese Lifestyle Guide">
+  <meta property="og:description" content="Practical guides, interactive tools, and daily practices inspired by Japanese life philosophies.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://example.com/og-image.jpg">
+  <link rel="alternate" hreflang="en" href="https://example.com/">
+  <link rel="alternate" hreflang="ja" href="https://example.com/ja/">
+</head>
+<body class="site-ui">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden>
+          <circle cx="50" cy="50" r="48" fill="none" stroke="var(--accent)" stroke-width="4" />
+          <path d="M28 62c8-16 44-16 52 0" stroke="var(--accent-dark)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-title">Ikigai & Kaizen</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
+        <ul id="main-menu" class="nav-list">
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#rituals">Rituals</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls" role="toolbar" aria-label="Header controls">
+        <nav class="breadcrumb" aria-label="Breadcrumbs"><ol id="breadcrumb-list" class="breadcrumb-list"><li><a href="#home">Home</a></li></ol></nav>
+        <div id="badges" class="badges" aria-live="polite" aria-atomic="true"></div>
+        <div class="header-actions">
+          <button id="theme-toggle" aria-pressed="false" class="btn btn-ghost" title="Toggle theme">Zen Mode</button>
+          <button id="search-toggle" class="btn btn-ghost" aria-expanded="false" aria-controls="site-search">🔍</button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main" role="main" tabindex="-1">
+    <section class="hero" id="home">
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <h1>Live Deliberately. Improve Daily.</h1>
+          <p class="lede">Explore the Japanese way of living—mindful routines, continuous improvement, and finding purpose through <strong>Ikigai</strong> and <strong>Kaizen</strong>.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#principles">Learn the Principles</a>
+            <a class="btn btn-ghost" href="#rituals">Try a Daily Ritual</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden>
+          <!-- stylized Mount Fuji + sakura SVG pattern -->
+          <svg viewBox="0 0 800 600" class="fuji" aria-hidden>
+            <defs>
+              <linearGradient id="sunGrad" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#f7a8a8" />
+                <stop offset="100%" stop-color="#ffd6a5" />
+              </linearGradient>
+            </defs>
+            <rect width="800" height="600" fill="var(--bg-2)"/>
+            <circle cx="600" cy="120" r="90" fill="url(#sunGrad)" opacity="0.95"/>
+            <path d="M0 480 L160 200 L360 480 Z" fill="#f5f5f7" opacity="0.8"/>
+            <path d="M160 480 L420 120 L700 480 Z" fill="#e9eef5"/>
+            <g class="sakura" fill="var(--accent)">
+              <circle cx="640" cy="80" r="6" opacity="0.9"/>
+              <circle cx="680" cy="110" r="4" opacity="0.85"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="principles" class="principles container">
+      <h2>Core Principles</h2>
+      <p class="intro">Japanese lifestyle blends meaning, craft, and continual refinement. Below are key pillars to inspire everyday living.</p>
+
+      <div class="cards grid">
+        <article class="card">
+          <h3>Ikigai</h3>
+          <p>Finding your reason for being—where passion meets service and livelihood. Small choices, deep meaning.</p>
+          <a class="card-link" href="#ikigai">Explore</a>
+        </article>
+
+        <article class="card">
+          <h3>Kaizen</h3>
+          <p>Continuous improvement through tiny, consistent changes—applied to craft, life, and work.</p>
+          <a class="card-link" href="#kaizen">Start improving</a>
+        </article>
+
+        <article class="card">
+          <h3>Wabi-Sabi</h3>
+          <p>Embrace imperfection and impermanence. Beauty in weathered surfaces and honest materials.</p>
+          <a class="card-link" href="#wabisabi">Practice</a>
+        </article>
+
+        <article class="card">
+          <h3>Ritual</h3>
+          <p>Mindful daily practices—tea, cleaning, movement—that center presence and clarity.</p>
+          <a class="card-link" href="#rituals">Try a ritual</a>
+        </article>
+      </div>
+
+    </section>
+
+    <section id="rituals" class="rituals container">
+      <h2>Daily Rituals</h2>
+      <div class="ritual-grid grid">
+        <div class="ritual">
+          <h4>Ocha (Tea)</h4>
+          <p>Slow the mind with deliberate tea—serve, sip, and reflect for 5–10 minutes daily.</p>
+        </div>
+        <div class="ritual">
+          <h4>Shikiri (Declutter)</h4>
+          <p>Five-minute tidy sessions to restore order and appreciation in your space.</p>
+        </div>
+        <div class="ritual">
+          <h4>Small Kaizen</h4>
+          <p>Pick one tiny improvement per day—log it and iterate.</p>
+        </div>
+        <div class="ritual">
+          <h4>Gratitude</h4>
+          <p>Record one small joy each evening to reorient long-term perspective.</p>
+        </div>
+      </div>
+      <div class="kaizen-tracker">
+        <h3>Kaizen Tracker</h3>
+        <p>Small wins add up. Track your tiny improvements below.</p>
+        <form id="kaizen-form" class="kaizen-form">
+          <input type="text" id="kaizen-input" placeholder="Today's small improvement" required>
+          <button class="btn btn-primary" type="submit">Add</button>
+        </form>
+        <ul id="kaizen-list" class="kaizen-list" aria-live="polite"></ul>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery container">
+      <h2>Gallery</h2>
+      <p class="intro">Scenes and objects emblematic of a mindful life—textures, tools, and quiet moments.</p>
+      <div class="masonry">
+        <figure class="tile" data-caption="Handmade tea bowl">
+          <img src="https://picsum.photos/seed/1/800/600" alt="Handmade tea bowl" loading="lazy">
+        </figure>
+        <figure class="tile" data-caption="Tatami and sliding door">
+          <img src="https://picsum.photos/seed/2/800/900" alt="Tatami and sliding door" loading="lazy">
+        </figure>
+        <figure class="tile" data-caption="Autumn maples">
+          <img src="https://picsum.photos/seed/3/800/600" alt="Autumn maples" loading="lazy">
+        </figure>
+        <figure class="tile" data-caption="Calligraphy brush">
+          <img src="https://picsum.photos/seed/4/800/1000" alt="Calligraphy brush" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section id="resources" class="resources container">
+      <h2>Resources & Practices</h2>
+      <ul class="resource-list">
+        <li><a href="#">Read: "Ikigai: The Japanese Secret"</a></li>
+        <li><a href="#">Try: A 30-day Kaizen challenge</a></li>
+        <li><a href="#">Watch: Tea ceremony tutorials</a></li>
+        <li><a href="#">Practice: Wabi-sabi DIY projects</a></li>
+      </ul>
+
+      <div class="practice-of-day mt-1">
+        <h3 id="practice-title">Practice of the Day</h3>
+        <div class="practice-content"><span id="practice-of-day">Loading…</span> <button id="practice-refresh" class="btn btn-ghost">Refresh</button> <button id="practice-complete" class="btn btn-primary">Complete</button></div>
+      </div>
+    </section>
+
+    <section id="programs" class="programs container">
+      <h2>Programs</h2>
+      <div id="programs"></div>
+    </section>
+
+    <section id="program-preview" class="container">
+      <h3>30-Day Wellbeing — Preview</h3>
+      <p class="small muted">A short sampler of daily micro-practices. Start a full program from the <a href="#programs">Programs</a> section to see the full plan.</p>
+    </section>
+
+    <section id="kaizen-planner" class="container">
+      <h2>Kaizen Planner</h2>
+      <p class="muted">Break a goal into tiny micro-steps, prioritize, and track progress.</p>
+      <form id="kaizen-planner-form" class="kaizen-planner-form">
+        <input name="task" class="input" placeholder="Micro-task (e.g., 'Clean one shelf')" required>
+        <select name="priority" class="input"><option value="low">Low</option><option value="med">Medium</option><option value="high">High</option></select>
+        <button class="btn btn-primary" type="submit">Add</button>
+      </form>
+      <div id="kaizen-tasks" class="mt-1"></div>
+      <canvas id="kaizen-progress" width="600" height="80" style="width:100%;height:64px"></canvas>
+    </section>
+
+    <section id="moai-builder" class="container">
+      <h2>Moai Builder</h2>
+      <p class="muted">Create a small support circle and add members for accountability and shared growth.</p>
+      <div id="moai-builder-controls" class="mt-1">
+        <input id="moai-name" placeholder="Group name" class="input"><input id="member-name" placeholder="Member name" class="input"><button id="add-member" class="btn btn-primary">Add Member</button>
+      </div>
+      <div id="moai-visual" class="border-soft mt-1"></div>
+    </section>
+
+    <section id="comparator" class="comparator container" aria-label="Comparator">
+      <h2>Comparator</h2>
+      <div class="comparator-inner grid">
+        <div>
+          <label for="compare-left">Left concept</label>
+          <select class="compare-left" id="compare-left"></select>
+          <div class="compare-left-body mt-1"></div>
+        </div>
+        <div>
+          <label for="compare-right">Right concept</label>
+          <select class="compare-right" id="compare-right"></select>
+          <div class="compare-right-body mt-1"></div>
+        </div>
+      </div>
+      <div class="compare-insight muted mt-1" aria-live="polite"></div>
+    </section>
+
+    <section id="nemawashi" class="container">
+      <h2>Nemawashi & Stakeholder Map</h2>
+      <div id="nemawashi" class="border-soft p-3">Loading stakeholder map…</div>
+    </section>
+
+    <section id="hara" class="container">
+      <h2>Hara Hachi Bu Coach</h2>
+      <p class="small muted">A gentle meal pacing timer to practice mindful fullness.</p>
+      <div class="hara-controls">
+        <button id="hara-start" class="btn btn-primary">Start 20-minute pacing</button>
+        <div id="hara-timer" class="small muted mt-1">00:00</div>
+      </div>
+    </section>
+
+    <section id="ikigai" class="container">
+      <h2>Ikigai Mapper</h2>
+      <div class="ikigai-grid grid">
+        <div id="ikigai-canvas" aria-hidden="true"></div>
+        <form class="ikigai-form">
+          <label>Passion <input id="ikigai-passion" name="passion" placeholder="What you love"></label>
+          <label>Mission <input id="ikigai-mission" name="mission" placeholder="What the world needs"></label>
+          <label>Vocation <input id="ikigai-vocation" name="vocation" placeholder="What you can be paid for"></label>
+          <label>Profession <input id="ikigai-profession" name="profession" placeholder="What you're good at"></label>
+          <button id="ikigai-export" type="button" class="btn btn-ghost">Export snapshot</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="habits" class="container">
+      <h2>Habits & Calendar</h2>
+      <p class="muted">Track daily practice, visualize streaks, and export/import your habit data.</p>
+      <form id="habit-form" class="habit-form">
+        <input name="habit" placeholder="New habit (e.g., 'Tea pause')" class="input" required>
+        <button class="btn btn-primary" type="submit">Add Habit</button>
+        <button id="habit-export" type="button" class="btn btn-ghost">Export</button>
+        <input id="habit-import" type="file" accept="application/json"/>
+      </form>
+      <div id="habit-list" class="mt-1"></div>
+      <div id="habit-calendar" aria-label="Habit calendar" class="habit-calendar mt-1"></div>
+    </section>
+
+    <section id="glossary" class="container">
+      <h2>Glossary</h2>
+      <input id="glossary-search" placeholder="Search terms (Ikigai, Kaizen, etc.)" class="input" aria-label="Search glossary">
+      <ul id="glossary-list" class="mono-list mt-1"></ul>
+    </section>
+
+    <section id="journal" class="container">
+      <h2>Journal & Hansei Reflections</h2>
+      <form id="journal-form" class="journal-form">
+        <input name="title" placeholder="Title" class="input">
+        <input name="tags" placeholder="Tags (comma separated)" class="input">
+        <textarea name="body" placeholder="Reflect on today's practice" class="textarea"></textarea>
+        <div class="journal-actions"><button type="submit" class="btn btn-primary">Save</button> <button type="button" id="journal-export" class="btn btn-ghost">Export All</button> <input id="journal-import" type="file" accept="application/json" /></div>
+      </form>
+      <div id="journal-list" class="mt-1"></div>
+    </section>
+
+    <section id="preferences" class="container">
+      <h2>Preferences</h2>
+      <form class="prefs-form">
+        <label>Theme <select id="pref-theme"><option value="light">Light</option><option value="dark">Dark</option><option value="sepia">Sepia</option></select></label>
+        <label>Locale <select id="pref-locale"><option value="en">English</option><option value="ja">日本語</option></select></label>
+        <label><input id="pref-motion" type="checkbox" /> Reduced motion</label>
+      </form>
+    </section>
+
+    <!-- Deep dives for core concepts (origin, practice plans, journaling prompts, pitfalls) -->
+    <section id="deep-dives" class="container">
+      <h2>Deep Dives</h2>
+      <p class="intro">Concise introductions to the site’s key concepts—each card links to a focused, practical page.</p>
+      <div class="cards grid">
+        <article class="card"><h3>Wabi-sabi</h3><p class="muted">Appreciation for imperfection and the beauty of the ephemeral.</p><a class="card-link" href="#wabisabi">Learn more</a></article>
+        <article class="card"><h3>Kintsugi</h3><p class="muted">Repair as celebration—honor scars and transformations.</p><a class="card-link" href="#kintsugi">Learn more</a></article>
+        <article class="card"><h3>Kaizen</h3><p class="muted">Small daily improvements that compound over time.</p><a class="card-link" href="#kaizen">Learn more</a></article>
+        <article class="card"><h3>Ikigai</h3><p class="muted">Finding purpose where passion, mission, vocation and skill meet.</p><a class="card-link" href="#ikigai">Open mapper</a></article>
+        <article class="card"><h3>Shinrin-yoku</h3><p class="muted">Mindful immersion in nature for restoration.</p><a class="card-link" href="#shinrin">Open soundscape</a></article>
+        <article class="card"><h3>Moai</h3><p class="muted">Small community circles that sustain long-term support.</p><a class="card-link" href="#moai-deep">Create a Moai</a></article>
+      </div>
+    </section>
+
+    <section id="showcase" class="container">
+      <article id="shinrin" class="deep-dive border-soft mt-1" data-concept="shinrin">
+        <h3>Shinrin-yoku (Forest Bathing)</h3>
+        <p class="muted">Origin: modern Japanese public health movement</p>
+        <h4>Philosophy</h4>
+        <p>Shinrin-yoku is mindful immersion in forest or natural scenes to support restoration.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Spend 10 minutes outside being mindful of senses.</li>
+          <li><strong>Intermediate:</strong> Take a 30-minute forest walk focusing on breath and posture.</li>
+          <li><strong>Advanced:</strong> Regularly schedule multi-day retreats and maintain a nature log.</li>
+        </ol>
+        <div class="deep-actions">
+          <div class="forest-controls">
+            <button id="forest-play" class="btn btn-primary">Play Forest</button>
+            <button id="forest-stop" class="btn btn-ghost">Stop</button>
+            <button id="forest-breathe" class="btn btn-ghost">Breathing Guide</button>
+          </div>
+        </div>
+        <div id="breathing-overlay" class="breathing-overlay" aria-hidden="true" aria-live="polite"></div>
+      </article>
+
+      <!-- Moai -->
+      <article id="moai-deep" class="deep-dive border-soft mt-1" data-concept="moai">
+        <h3>Moai (Community Circles)</h3>
+        <p class="muted">Origin: Okinawan social circles for mutual support</p>
+        <h4>Philosophy</h4>
+        <p>Moai provide ongoing mutual support—financial, emotional, or practical—over a lifetime.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Invite two people to a monthly check-in group.</li>
+          <li><strong>Intermediate:</strong> Formalize simple rules and shared responsibilities.</li>
+          <li><strong>Advanced:</strong> Host a rotating facilitation and reflect on group growth.</li>
+        </ol>
+        <div class="deep-actions"><button class="btn btn-ghost" data-action="create-moai">Create a Moai</button></div>
+      </article>
+
+      <!-- Omotenashi -->
+      <article id="omotenashi" class="deep-dive border-soft mt-1" data-concept="omotenashi">
+        <h3>Omotenashi (Thoughtful Hospitality)</h3>
+        <p class="muted">Origin: Japanese hospitality culture</p>
+        <h4>Philosophy</h4>
+        <p>Omotenashi anticipates needs and serves thoughtfully with humility and detail.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Prepare a small, thoughtful detail for a guest (a note or tea).</li>
+          <li><strong>Intermediate:</strong> Design an experience that removes small frictions for others.</li>
+          <li><strong>Advanced:</strong> Teach others the practice of anticipating needs in service design.</li>
+        </ol>
+      </article>
+
+      <!-- Mottainai -->
+      <article id="mottainai" class="deep-dive border-soft mt-1" data-concept="mottainai">
+        <h3>Mottainai</h3>
+        <p class="muted">Origin: Buddhist phrase encouraging regret for waste</p>
+        <h4>Philosophy</h4>
+        <p>Mottainai prompts mindful use, repair, and gratitude toward resources.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Track one item you discarded this week and find reuse options.</li>
+          <li><strong>Intermediate:</strong> Repair or repurpose three household items this month.</li>
+          <li><strong>Advanced:</strong> Start a local swap or upcycle group.</li>
+        </ol>
+      </article>
+
+      <!-- Gaman -->
+      <article id="gaman" class="deep-dive border-soft mt-1" data-concept="gaman">
+        <h3>Gaman</h3>
+        <p class="muted">Origin: cultural virtue of endurance</p>
+        <h4>Philosophy</h4>
+        <p>Gaman emphasizes dignity, patience, and perseverance in the face of difficulty.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Practice a 5-minute breathing technique before reacting to stress.</li>
+          <li><strong>Intermediate:</strong> Set a short, demanding task and practice steady focus.</li>
+          <li><strong>Advanced:</strong> Lead a group reflection on resilience and healthy boundaries.</li>
+        </ol>
+      </article>
+
+      <!-- Ma -->
+      <article id="ma" class="deep-dive border-soft mt-1" data-concept="ma">
+        <h3>Ma</h3>
+        <p class="muted">Origin: aesthetic and temporal spacing</p>
+        <h4>Philosophy</h4>
+        <p>Ma is the purposeful space between things — pauses in speech, breathing, and layout.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Add a 5-minute buffer before meetings and notice the effect.</li>
+          <li><strong>Intermediate:</strong> Design a simple page with deliberate whitespace.</li>
+          <li><strong>Advanced:</strong> Rework your weekly calendar to include restorative gaps.</li>
+        </ol>
+      </article>
+
+      <!-- Kanso -->
+      <article id="kanso" class="deep-dive border-soft mt-1" data-concept="kanso">
+        <h3>Kanso</h3>
+        <p class="muted">Origin: simplicity and clarity in design and thought</p>
+        <h4>Philosophy</h4>
+        <p>Kanso encourages elimination of complexity and focus on essential forms.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Clear one drawer or shelf, keeping only what serves you.</li>
+          <li><strong>Intermediate:</strong> Reevaluate daily tools—remove one redundant app or process.</li>
+          <li><strong>Advanced:</strong> Redesign a routine to remove unnecessary friction points.</li>
+        </ol>
+      </article>
+
+      <!-- Seijaku -->
+      <article id="seijaku" class="deep-dive border-soft mt-1" data-concept="seijaku">
+        <h3>Seijaku</h3>
+        <p class="muted">Origin: Zen — tranquility amid activity</p>
+        <h4>Philosophy</h4>
+        <p>Seijaku teaches finding calm within a busy life through intentional pauses and rituals.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Create a 3-minute ritual to begin and end your workday.</li>
+          <li><strong>Intermediate:</strong> Practice seated breathwork before key meetings.</li>
+          <li><strong>Advanced:</strong> Host a weekly communal quiet hour (digital-free).</li>
+        </ol>
+      </article>
+
+      <!-- Zanshin -->
+      <article id="zanshin" class="deep-dive border-soft mt-1" data-concept="zanshin">
+        <h3>Zanshin</h3>
+        <p class="muted">Origin: martial arts awareness</p>
+        <h4>Philosophy</h4>
+        <p>Zanshin is remaining attentive after an action — an ongoing awareness that supports mastery.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Add a 2-minute review after completing important tasks.</li>
+          <li><strong>Intermediate:</strong> Practice journaling brief reflections on task completion.</li>
+          <li><strong>Advanced:</strong> Implement a post-project hansei session with metrics and improvements.</li>
+        </ol>
+      </article>
+
+      <!-- Nemawashi (deep) -->
+      <article id="nemawashi-deep" class="deep-dive border-soft mt-1" data-concept="nemawashi">
+        <h3>Nemawashi</h3>
+        <p class="muted">Origin: groundwork and consensus-building</p>
+        <h4>Philosophy</h4>
+        <p>Nemawashi is the behind-the-scenes alignment with stakeholders to ensure smoother decisions.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Identify 3 stakeholders and note their interests.</li>
+          <li><strong>Intermediate:</strong> Hold brief one-on-one conversations before formal planning.</li>
+          <li><strong>Advanced:</strong> Map influence vs support and plan pre-alignment steps.</li>
+        </ol>
+      </article>
+
+      <!-- Hansei -->
+      <article id="hansei-deep" class="deep-dive border-soft mt-1" data-concept="hansei">
+        <h3>Hansei</h3>
+        <p class="muted">Origin: reflective learning and improvement</p>
+        <h4>Philosophy</h4>
+        <p>Hansei is candid self-reflection to identify blindspots and commit to improvement.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Keep a weekly failure/learning note of one sentence.</li>
+          <li><strong>Intermediate:</strong> Run a structured review with root cause analysis for one action.</li>
+          <li><strong>Advanced:</strong> Facilitate hansei sessions for teams with action plans and ownership.</li>
+        </ol>
+      </article>
+
+      <!-- Shu-Ha-Ri -->
+      <article id="shu-hari" class="deep-dive border-soft mt-1" data-concept="shu-hari">
+        <h3>Shu-Ha-Ri</h3>
+        <p class="muted">Origin: learning stages in arts and craft</p>
+        <h4>Philosophy</h4>
+        <p>Shu-Ha-Ri articulates stages: Shu (learn rules), Ha (break rules), Ri (transcend).</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Follow a mentor closely and practice basic forms.</li>
+          <li><strong>Intermediate:</strong> Experiment and adapt techniques to your context.</li>
+          <li><strong>Advanced:</strong> Innovate beyond form while keeping core principles intact.</li>
+        </ol>
+      </article>
+
+      <!-- Hara hachi bu (deep) -->
+      <article id="hara-deep" class="deep-dive border-soft mt-1" data-concept="hara">
+        <h3>Hara hachi bu</h3>
+        <p class="muted">Origin: Okinawan longevity practice</p>
+        <h4>Philosophy</h4>
+        <p>Hara hachi bu encourages mindful eating to about 80% fullness as a longevity habit.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Pause mid-meal and check fullness before eating more.</li>
+          <li><strong>Intermediate:</strong> Use smaller plates and savor each bite for mindful pacing.</li>
+          <li><strong>Advanced:</strong> Track mealtime outcomes and mood to calibrate intake.</li>
+        </ol>
+      </article>
+
+      <!-- Mono no aware -->
+      <article id="mono" class="deep-dive border-soft mt-1" data-concept="mono">
+        <h3>Mono no aware</h3>
+        <p class="muted">Origin: classical Japanese sensitivity to the ephemeral</p>
+        <h4>Philosophy</h4>
+        <p>Mono no aware is a sensitivity to transience and the gentle pathos of change.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Notice one seasonal change each week and write a short note.</li>
+          <li><strong>Intermediate:</strong> Maintain a seasonal gratitude list and rituals for transitions.</li>
+          <li><strong>Advanced:</strong> Use seasonal cues to structure longer-term goals and resets.</li>
+        </ol>
+      </article>
+
+      <!-- Chowa -->
+      <article id="chowa" class="deep-dive border-soft mt-1" data-concept="chowa">
+        <h3>Chowa</h3>
+        <p class="muted">Origin: harmony and balance</p>
+        <h4>Philosophy</h4>
+        <p>Chowa seeks balanced integration across domains: work, family, community, and self.</p>
+        <h4>Practice plan</h4>
+        <ol>
+          <li><strong>Beginner:</strong> Identify one boundary to protect and practice it for a week.</li>
+          <li><strong>Intermediate:</strong> Schedule regular pauses and restitution time (Ma and Seijaku combined).</li>
+          <li><strong>Advanced:</strong> Design a work-life integration plan with reflections and review points.</li>
+        </ol>
+      </article>
+
+    </section>
+
+    <section id="interactive-modules" class="container">
+      <h2>Interactive Modules</h2>
+      <p class="muted">Quick links to the key interactive tools—lightweight, local, and private.</p>
+      <div class="grid">
+        <div class="card"><a class="card-link" href="#ikigai">Ikigai Mapper</a></div>
+        <div class="card"><a class="card-link" href="#habits">Habit Tracker</a></div>
+        <div class="card"><a class="card-link" href="#kintsugi-tool">Kintsugi Studio</a></div>
+        <div class="card"><a class="card-link" href="#shinrin">Shinrin Soundscape</a></div>
+      </div>
+    </section>
+
+    <section id="kintsugi-tool" class="container">
+      <h2>Kintsugi Metaphor Studio</h2>
+      <p class="muted">Upload an image and apply golden "repairs" interactively; save or share your repaired image.</p>
+      <div class="kintsugi-area border-soft mt-1" id="kintsugi-area">
+        <input id="kintsugi-image" type="file" accept="image/*" />
+        <canvas id="kintsugi-canvas" width="800" height="400" style="width:100%;height:auto;"></canvas>
+        <div class="mt-1">
+          <button id="kintsugi-save" class="btn btn-primary">Save PNG</button>
+          <button id="kintsugi-clear" class="btn btn-ghost">Clear Strokes</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="container">
+      <h2>Frequently Asked Questions</h2>
+      <p class="muted">Practical Q&A and myths clarified.</p>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Is this content culturally accurate?</summary><div class="faq-body">We provide historical context, cite origins, and emphasize respectful adaptation; not all practices apply to every context.</div></details>
+        <details class="faq-item"><summary>Can these practices replace professional help?</summary><div class="faq-body">No. The exercises are supportive habits; for medical or psychological needs seek licensed professionals.</div></details>
+        <details class="faq-item"><summary>Are the programs evidence-based?</summary><div class="faq-body">Many practices (forest bathing, mindful breathing) have supporting research; where not, we indicate cultural origins and experiential benefits.</div></details>
+        <details class="faq-item"><summary>How do I export my journal?</summary><div class="faq-body">Use the Export button in the Journal section to download JSON or Markdown for backup or print.</div></details>
+        <details class="faq-item"><summary>Does the app send data to a server?</summary><div class="faq-body">No — all data is stored locally in your browser (LocalStorage) by default. A server integration is optional and would require your consent.</div></details>
+        <details class="faq-item"><summary>How can I contribute content?</summary><div class="faq-body">We plan community contributions via a future Moai hub and curated submissions — contact us for details.</div></details>
+        <details class="faq-item"><summary>Can I change the theme?</summary><div class="faq-body">Yes — use the Preferences section to change theme, locale and motion preferences.</div></details>
+        <details class="faq-item"><summary>Are audio features accessible?</summary><div class="faq-body">We include transcripts, captions, and alternatives; speech synthesis is used as an accessible fallback for pronunciations.</div></details>
+        <details class="faq-item"><summary>What happens if I lose my browser data?</summary><div class="faq-body">Export your journal and program data regularly; LocalStorage is a convenience but not a backup solution.</div></details>
+        <details class="faq-item"><summary>How do I report bugs or suggest features?</summary><div class="faq-body">Open an issue via the project repository or use the contact form to share feedback.</div></details>
+      </div>
+    </section>
+
+    <section id="resources-expanded" class="container">
+      <h2>Curated Resources & Paths</h2>
+      <p class="muted">A concise selection to deepen practice—books, exercises, and guides.</p>
+      <ul class="resource-list">
+        <li><a href="#">Ikigai: Book summary & exercises</a></li>
+        <li><a href="#">Kintsugi workshops & reflection prompts</a></li>
+        <li><a href="#">Shinrin breathing & soundscapes</a></li>
+        <li><a href="#">Kaizen habit templates</a></li>
+      </ul>
+      <p class="small muted mt-1">Printable templates are available via the Journal export or Program export features.</p>
+    </section>
+
+  </main>
+
+  <div id="confetti" aria-hidden="true" class="confetti-container"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Ikigai & Kaizen — Inspired by Japanese virtues of living well.</p>
+      <div class="socials">
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for images -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <img id="modal-img" alt="">
+    <figcaption id="modal-caption"></figcaption>
+  </div>
+  <script src="script.js"></script>
+  <script src="app.js" type="module" defer></script>
+</body>
+</html>
